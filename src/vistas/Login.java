@@ -38,6 +38,8 @@ public class Login extends javax.swing.JFrame {
         MinimizeButton = new javax.swing.JLabel();
         btnStart = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        nombre = new javax.swing.JLabel();
+        txtnombre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -77,6 +79,13 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("INICIAR");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 50, -1));
+
+        nombre.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
+        nombre.setText("INGRESA TU NOMBRE");
+        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 330, 40));
+
+        txtnombre.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 320, 70));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -168,5 +177,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nombre;
+    private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
 }
