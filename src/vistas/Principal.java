@@ -17,7 +17,7 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        rsscalelabel.RSScaleLabel.setScaleLabel(jLabel1, "src/imagenes/fondoinsert.jpg");
+        rsscalelabel.RSScaleLabel.setScaleLabel(jLabel1, "src/imagenes/fisica2.jpg");
         rsscalelabel.RSScaleLabel.setScaleLabel(imgmov, "src/imagenes/proyectil.gif");
         rsscalelabel.RSScaleLabel.setScaleLabel(ecuaciones, "src/imagenes/ecuaciones.gif");
     }
@@ -39,6 +39,7 @@ public class Principal extends javax.swing.JFrame {
         teoria3 = new javax.swing.JLabel();
         QUEES1 = new javax.swing.JLabel();
         ecuaciones = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,7 +56,7 @@ public class Principal extends javax.swing.JFrame {
                 btnsiguienteActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 740, 160, 140));
+        jPanel1.add(btnsiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 800, 160, 60));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 48)); // NOI18N
         jLabel2.setText("MOVIMIENTO PARABOLICO");
@@ -88,6 +89,14 @@ public class Principal extends javax.swing.JFrame {
         QUEES1.setText("¿QUE ES ?");
         jPanel1.add(QUEES1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 170, 100));
         jPanel1.add(ecuaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 500, 830, 230));
+
+        jButton1.setText("INICIO");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 780, 130, 50));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 900));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 900));
@@ -101,37 +110,13 @@ public class Principal extends javax.swing.JFrame {
     dispose();
     }//GEN-LAST:event_btnsiguienteActionPerformed
 
-    public static void main(String args[]) {
-     
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    Login p=new Login();
+     p.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal().setVisible(true);
-            }
-        });
-    }
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel QUEES;
@@ -139,6 +124,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnsiguiente;
     private javax.swing.JLabel ecuaciones;
     private javax.swing.JLabel imgmov;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

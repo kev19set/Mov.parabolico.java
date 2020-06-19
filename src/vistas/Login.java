@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 
-public class Login extends javax.swing.JFrame {
+public final class Login extends javax.swing.JFrame {
 
    
     public Login() {
@@ -38,8 +38,9 @@ public class Login extends javax.swing.JFrame {
         MinimizeButton = new javax.swing.JLabel();
         btnStart = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        nombre = new javax.swing.JLabel();
-        txtnombre = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -80,12 +81,29 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("INICIAR");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 50, -1));
 
-        nombre.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
-        nombre.setText("INGRESA TU NOMBRE");
-        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 330, 40));
+        jButton1.setText("TEORIA");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 140, 50));
 
-        txtnombre.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 320, 70));
+        jButton2.setText("CALCULO/RESOLUCION");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 190, 50));
+
+        jButton3.setText("GRAFICO");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 140, 50));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,6 +141,24 @@ public class Login extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(this, e);
     }
     }//GEN-LAST:event_CloseButtonMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    Principal p=new Principal();
+            p.setVisible(true);
+            dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    Insert p=new Insert();
+    p.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+     Animacion p=new Animacion();
+        p.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
  
     public static void main(String args[]) {
@@ -174,10 +210,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel CloseButton;
     private javax.swing.JLabel MinimizeButton;
     private javax.swing.JButton btnStart;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel nombre;
-    private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
 }
